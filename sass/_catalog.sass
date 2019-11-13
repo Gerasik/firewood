@@ -1,12 +1,37 @@
 .catalog
     .item
-        background-color: $bgc1
+        box-shadow: 4px 4px 10px -2px #1d1d1d
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .super
+            vertical-align: super
+            font-size: 0.8em
+            color: $header2
+        b
+            color: $header2
         &__header
             text-align: center
-            b
-                color: $header2
+            font-weight: bold
+            margin: 10px 0
+            font-size: 1.2em
         &__img
             width: 100%
-            max-height: 150px
+            max-height: 170px
             object-fit: cover
             object-position: bottom
+        &__cost 
+            margin: 10px 0
+        &__button
+            border: none
+            background-color: $button1
+            color: $button2
+            font-size: 1em
+            font-weight: bold
+            margin: 10px 0
+            transition: all 0.3s
+            padding: 10px
+            &:hover
+                background-color: $button2
+                color: $button1
