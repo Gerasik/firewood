@@ -57,7 +57,7 @@
 			 		<nav class="main-navigation">
 			 			<ul class="main-navigation__list">
 							<li class="main-navigation__item"><a href="#" class="main-navigation__link">Главная</a></li>
-							<li class="main-navigation__item"><a href="#" class="main-navigation__link">Каталог</a></li>
+							<li class="main-navigation__item"><a href="#catalog" class="main-navigation__link">Каталог</a></li>
 							<li class="main-navigation__item"><a href="#" class="main-navigation__link">Доставка/Оплата</a></li>
 							<li class="main-navigation__item"><a href="#" class="main-navigation__link">Контакты</a></li>
 							<li class="main-navigation__item"><a href="#" class="main-navigation__link">О нас</a></li>
@@ -87,7 +87,7 @@
 		</div>
 	</header>
 
-	<section class="catalog">
+	<section id="catalog" class="catalog">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -149,6 +149,38 @@
 				</div>
 			</div>
 		</div>
+	</section>
+
+	<section class="modal-from modal-from--hidden">
+		<form action="" class="modal-from__form">
+			<button type="close" class="modal-from__close">Назад</button>
+			<fieldset>
+				<legend>Заказать звонок</legend>
+				<p>
+					<label for="name">Имя <em>*</em></label>
+					<input type="text" id="name" placeholder="Имя">
+				</p>
+				<p>
+					<label for="phone">Телефон <em>*</em></label> +375
+					<select name="code">
+						<option selected value="25">25</option>
+						<option value="29">29</option>
+						<option value="33">33</option>
+						<option value="44">44</option>
+					</select>
+					<input type="tel" id="phone" name="phone"
+						pattern="[0-9]{7}"
+						placeholder="1234567"
+						required>
+				</p>
+				<label for="text">Дополнительная информация</label>
+				</br>
+				<textarea name="text" id="text" cols="30" rows="3" value="asda"></textarea>
+				<button type="submit">
+					Заказать звонок
+				</button>
+			</fieldset>
+		</form>
 	</section>
 
 	<script src="js/scripts.min.js"></script>
