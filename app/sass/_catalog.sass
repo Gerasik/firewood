@@ -3,14 +3,16 @@
         box-shadow: 4px 4px 10px -2px #1d1d1d
         display: flex
         flex-direction: column
-        justify-content: center
+        justify-content: space-between
         align-items: center
+        height: 100%
         .super
             vertical-align: super
             font-size: 0.8em
             color: $header2
         b
             color: $header2
+            text-transform: uppercase
         &__header
             text-align: center
             font-weight: bold
@@ -32,6 +34,9 @@
             margin: 10px 0
             transition: all 0.3s
             padding: 10px
+            border-radius: 5px
+            border: 2px solid $button2
             &:hover
                 background-color: $button2
                 color: $button1
+                border-color: $button1
