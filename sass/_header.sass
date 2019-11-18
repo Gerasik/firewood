@@ -1,99 +1,275 @@
-.header
+// .header
+//     width: 100%
+//     height: 100vh
+//     // background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/@1x/header-bgi.jpg)
+//     // background-size: cover
+//     // background-repeat: no-repeat
+//     display: flex
+//     flex-direction: column
+//     justify-content: stretch
+//     position: relative
+//     overflow: hidden
+//     div:last-child
+//         flex-grow: 20
+//         display: flex
+//         align-items: center
+//     div:first-child
+//         flex-grow: 1
+//     &__phones
+//         a
+//             color: $header1
+//             font-weight: bold
+//             font-size: $headerfz
+//         img
+//             height: 25px
+//             margin: 0 15px
+//     &__content
+//         position: absolute
+//         top: 0
+//         left: 0
+//         width: 100%
+//         height: 100%
+//         z-index: 4
+//         // background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) )
+//         background-color: rgba(0, 0, 0, 0.8)
+//     &__video
+//         position: absolute
+//         // width: 100%
+//         // z-index: -1
+// .main-navigation
+//     width: 100%
+//     &__list
+//         display: flex
+//         justify-content: flex-end
+//         padding: 20px 0px
+//         margin: 0
+//     &__item
+//         list-style: none
+//         padding: 10px
+//     &__link
+//         color: white
+//         font-size: $headerfz
+//         transition: all 0.2s
+//         position: relative
+//         white-space: nowrap
+//         &::before,
+//         &::after
+//             content: ''
+//             width: 0
+//             height: 1px
+//             position: absolute
+//             bottom: 0
+//             background-color: #fff
+//             transition: width 0.5s
+//         &::before
+//             right: 50%
+//         &::after
+//             left: 50%
+//         &:hover::before,
+//         &:hover::after
+//             width: 50%
+//         &:hover
+//             color: rgb(189, 189, 189)
+//             text-decoration: none
+// .main-content 
+//     &__wrap
+//         display: flex
+//         flex-direction: column
+//         color: $header1
+//     h1
+//         font-size: 2em
+//         text-align: center
+//         a
+//             color: $header1
+//             font-weight: bold
+//             font-size: 0.9em
+//         img
+//             height: 25px
+//             margin: 0 15px
+//     p
+//         font-size: 1.3em
+//         text-align: center
+//     span
+//         color: $header2
+//         &.top
+//             vertical-align: super
+//             font-size: 0.8em
+
+
+
+.main-header
     width: 100%
     height: 100vh
-    // background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ), url(../img/@1x/header-bgi.jpg)
-    // background-size: cover
-    // background-repeat: no-repeat
-    display: flex
-    flex-direction: column
-    justify-content: stretch
     position: relative
     overflow: hidden
-    div:last-child
-        flex-grow: 20
+    z-index: 5
+    &__header-menu
+        position: fixed
+        top: 0
+        left: 0
+    &__video
+        position: absolute
+        z-index: -1
+    &__main-content
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.7)
+    &__header-menu
+        width: 100%
+        // &__wrap
+        //     max-width: 1024px
+        //     margin: 0 auto
+        
+
+.header-menu
+    font-size: 1.2em
+    padding: 20px 0
+    transition: all 0.5s
+    background: transparent
+    &__wrap
         display: flex
+        justify-content: space-between
         align-items: center
-    div:first-child
-        flex-grow: 1
+    &__logo
+        text-transform: uppercase
+        color: $header1
+        font-weight: bold
+        p
+            margin: 0
+        span
+            color: $header2
     &__phones
         a
             color: $header1
             font-weight: bold
-            font-size: $headerfz
         img
             height: 25px
-            margin: 0 15px
-    &__content
-        position: absolute
-        top: 0
-        left: 0
-        width: 100%
+            margin: 0 15p
+    &--black,
+    &--active
+        // background: linear-gradient(to bottom, #3a1e00, #da6f00)
+        background: #3a1e00    
+    &--active
         height: 100%
-        z-index: 4
-        // background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) )
-        background-color: rgba(0, 0, 0, 0.8)
-    &__video
-        position: absolute
-        top: -20%
-        left: 0
-        width: 100%
-        // z-index: -1
-.main-navigation
-    width: 100%
+        position: fixed
+        .navigation
+            position: absolute
+            top: 0
+            left: 0
+            width:  100%
+            height: 100vh
+            &__list
+                flex-direction: column
+                height: 100%
+                justify-content: center
+            &__item
+                text-align: center
+        .header-menu__phones
+            position: absolute
+            bottom: 10px
+            left: 40%
+
+    
+.navigation
     &__list
         display: flex
-        justify-content: flex-end
-        padding: 20px 0px
         margin: 0
     &__item
         list-style: none
-        padding: 10px
+        padding: 0 10px 
     &__link
-        color: white
-        font-size: $headerfz
-        transition: all 0.2s
+        color: $header1
+        font-weight: normal
+        font-size: 0.8em
         position: relative
-        white-space: nowrap
         &::before,
         &::after
             content: ''
-            width: 0
-            height: 1px
+            background-color: $header2
             position: absolute
+            height: 1px
+            width: 0
             bottom: 0
-            background-color: #fff
-            transition: width 0.5s
+            transition: all 0.5s
         &::before
-            right: 50%
-        &::after
             left: 50%
-        &:hover::before,
-        &:hover::after
-            width: 50%
+        &::after
+            right: 50%
         &:hover
-            color: rgb(189, 189, 189)
+            color: $header2
             text-decoration: none
-.main-content 
+            &::before,
+            &::after
+                width: 50%
+                
+
+
+.main-content
+    // width: 100%
+    height: 100%
     &__wrap
+        height: 100%
         display: flex
         flex-direction: column
-        color: $header1
-    h1
-        font-size: 2em
-        text-align: center
-        a
-            color: $header1
-            font-weight: bold
-            font-size: 0.9em
-        img
-            height: 25px
-            margin: 0 15px
+        align-items: center
+        justify-content: center
+
+.header-button
+    width: 40px
+    height: 40px
+    background-color: inherit
+    border: 2px solid $header1
+    border-radius: 8px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    padding: 4px 0
+    display: none
+    &__line1,
+    &__line2,
+    &__line3
+        height: 4px
+        border-radius: 2px
+        width: 28px
+        background-color: $header2
+        transition: all 0.4s
+    &--active
+        position: relative
+        .header-button
+            &__line2
+                display: none
+            &__line1,
+            &__line3
+                position: absolute
+                top: 49%
+            &__line1
+                // transform-origin: 5px 5px 
+                transform: rotate(45deg) 
+            &__line3
+                // transform-origin: 5px 5px
+                transform: rotate(-45deg)
+
+
+
+.main-content  
+    color: $header1
+    font-size: 1em
+    text-align: center
     p
-        font-size: 1.3em
-        text-align: center
-    span
+        font-size: 1.4em
+    h1,
+    h2
+        font-size: 1.6em
+        font-weight: bold
+    p,
+    h1,
+    h2
+        margin: 10px 0
+    h1
+    
+    h2
+    
+    span,
+    a
         color: $header2
-        &.top
-            vertical-align: super
-            font-size: 0.8em
-        
