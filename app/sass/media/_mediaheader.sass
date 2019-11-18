@@ -1,0 +1,53 @@
+.main-header
+    @media screen
+        @media (orientation: landscape)
+            &__video
+                width: 120%
+                top: -20%
+                left: 0
+        @media (orientation: portrait)
+            &__video
+                height: 120%
+                left: -40%
+                top: 0
+
+@media (max-width: 991px)
+    .main-header
+        .header-menu
+            &__phones
+                display: none
+            &--active
+                .header-menu
+                    &__phones
+                        display: block
+
+@media (max-width: 767px)
+    .main-header
+        .header-menu   
+            &__navigation
+                display: none
+            &__header-button
+                display: flex
+            &--active
+                .header-menu
+                    &__navigation
+                        display: block
+        .main-content
+            font-size: 0.8em
+
+@media (max-width: 425px)
+    .main-header
+        .header-menu 
+            font-size: 1em
+            padding: 10px
+        .main-content
+            font-size: 0.6em
+        .header-button
+            width: 30px
+            height: 30px
+            &__line1,
+            &__line2,
+            &__line3
+                width: 18px
+                height: 2px
+            
